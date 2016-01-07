@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include ../menu %>
+    <p><%=title%></p>
+    <% include ../login/message %>
+    <form  method='post' action="/showInfo">
+      FROM:<input type="text" name = "from" onkeyup="value = this.value.replace(/[^\d]/g,'');"/>
+      TO:<input type="text" name = "to" />
+      <p><input type="submit" value="查询" /></p>
+    </form>
+    <% if(typeof(dataList)=="string"){ %>
+    <% }else{ %>
+      <% dataList.forEach(function(data){ %>
+        <div class="ently">
+          <h3><%= data.title %></h3> 
+          <p><%= data.body %></p>
+        </div>
+      <% }) %>
+      <% } %>
+  </body>
+</html>

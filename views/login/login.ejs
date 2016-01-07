@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include ../menu %>
+    <% if(type !=""){ %>
+        <h1><%= type %></h1>
+    <% } %>
+      <% include message %>
+      <form  method='post' id="login" action="/loginIn" name="login">
+          <P>账户名:<input type="text" name="userName" /></P>
+          <P>密码: <input type="password" name='userPassword'/></P>
+          <p><input type="submit" value="登陆"/></p>
+          <a href="./register" />还没有账号，去注册</a>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <% include ../menu %>
+      <h1><%=title%></h1>
+      <% include message %>
+      <form  method='post' id="register" action="/register" name="register">
+          <P>账户名:<input type="text" name="userName" /></P>
+          <P>密码: <input type="password" name='userPassword'/></P>
+          <p><input type="submit" value="注册"/></p>
+      </form>
+  </body>
+</html>

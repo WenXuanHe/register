@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include ../menu %>
+    <%if(locals.user){ %>
+      <p> <%=title%> </p>
+      <% include ../login/message %>
+      <form  method='post' id="saveInfo" action="/saveInfo" name="saveInfo">
+        <P>标题:<input type="text" name="titie" /></P>
+        <P>正文: <textarea  name='meanValue' placeholder="Body" maxlength=40/></textarea></P>
+        <p><input type="submit" value="提交"/></p>
+      </form>
+      <p><a href = "/showInfo">去查看信息吧</a></p>
+     <% }else{ %>
+        <h2>游客请先登录 </h2>
+     <% } %>
+    
+  </body>
+</html>

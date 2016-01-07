@@ -1,0 +1,11 @@
+<%if(locals.user){ %>
+	<div id="menu" >
+		<a class="pr20 fr" href="/loginout" />loginout </a>
+		<span class="name">Hi , <%=user.name%> </span>
+	</div>
+<%}else{ %>
+	<div id="menu" >
+		<a class="pr20 fr" href="/login" />login </a>
+		<a class="pr20 fr" href="/register" />register </a>
+	</div>
+<% } %>
