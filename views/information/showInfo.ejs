@@ -9,11 +9,10 @@
     <p><%=title%></p>
     <% include ../login/message %>
     <form  method='post' action="/showInfo">
-      FROM:<input type="text" name = "from" onkeyup="value = this.value.replace(/[^\d]/g,'');"/>
-      TO:<input type="text" name = "to" />
       <p><input type="submit" value="查询" /></p>
     </form>
     <% if(typeof(dataList)=="string"){ %>
+      <p > <%=dataList%> </p>
     <% }else{ %>
       <% dataList.forEach(function(data){ %>
         <div class="ently">
@@ -21,6 +20,7 @@
           <p><%= data.body %></p>
         </div>
       <% }) %>
-      <% } %>
+     <% } %>
+    <% include ../page %>
   </body>
 </html>

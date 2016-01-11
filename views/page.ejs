@@ -1,0 +1,16 @@
+<div id = "pager">
+	<% if (locals.page) { %>
+		<% if (locals.page.count > 1) { %>
+			每页<%=locals.page.perpage%>条&nbsp;&nbsp;共<%=locals.page.total%>条&nbsp;&nbsp;
+			<% if (locals.page.number > 1 && locals.page.number < locals.page.count) { %>
+				<a id = "prev" href='<%=locals.pathname%>?page=<%=locals.page.number-1%>'>Prev</a>&nbsp;&nbsp;
+				<a id="next" href = '<%=locals.pathname%>?page=<%=locals.page.number+1%>'>After</a>&nbsp;&nbsp;
+			<% }else if(locals.page.number == locals.page.count){ %>
+				<a id = "prev" href='<%=locals.pathname%>?page=<%=locals.page.number-1%>'>Prev</a>&nbsp;&nbsp;
+			<% }else if (locals.page.number == 1){ %>
+				<a id="next" href = '<%=locals.pathname%>?page=<%=locals.page.number+1%>'>After</a>&nbsp;&nbsp;
+			<% }%>
+			<%=locals.page.number%>/<%=locals.page.count%>
+		<% } %>
+	<% } %>
+</div>

@@ -12,6 +12,7 @@ var login = require('./routes/login/login');
 var register = require('./routes/login/register');
 var session = require('express-session');
 var messages  = require('./lib/message.js');
+var page  = require('./lib/page.js');
 var user_menu  = require('./lib/user_menu.js');
 var checkMiddle  = require('./lib/checkMiddle.js');
 var app = express();
@@ -46,13 +47,12 @@ app.get('/login', login);
 app.get('/loginout', login);
 app.get('/register', register);
 app.get('/saveInfo', info);
-app.get('/showInfo',  info);
+app.get('/showInfo', page(5), info);
 app.post('/saveInfo', checkMiddle.notSpace("titie"), checkMiddle.notSpace("meanValue"), info);
-app.post('/showInfo', checkMiddle.notSpace("from"), checkMiddle.notSpace("to"), info);
+app.post('/showInfo', checkMiddle.notSpace("from"), checkMiddle.notSpace("to"),page(5), info);
 app.post('/loginIn', login);
 app.post('/register', register);
 app.use('/', routes);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
