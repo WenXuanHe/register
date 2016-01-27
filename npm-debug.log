@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'fs' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose install initial load of E:\github\shoutbox\register\package.json
+5 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\bcryptjs\package.json
+6 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\body-parser\package.json
+7 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\cookie-parser\package.json
+8 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\debug\package.json
+9 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\ejs\package.json
+10 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\express\package.json
+11 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\express-session\package.json
+12 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\morgan\package.json
+13 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\node-gyp\package.json
+14 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\redis\package.json
+15 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\serve-favicon\package.json
+16 verbose installManyTop reading scoped package data from E:\github\shoutbox\register\node_modules\url\package.json
+17 info package.json url@0.11.0 url is also the name of a node core module.
+18 verbose readDependencies loading dependencies from E:\github\shoutbox\register\package.json
+19 silly cache add args [ 'fs', null ]
+20 verbose cache add spec fs
+21 silly cache add parsed spec Result {
+21 silly cache add   raw: 'fs',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'fs',
+21 silly cache add   rawSpec: '',
+21 silly cache add   spec: '*',
+21 silly cache add   type: 'range' }
+22 silly addNamed fs@*
+23 verbose addNamed "*" is a valid semver range for fs
+24 silly addNameRange { name: 'fs', range: '*', hasData: false }
+25 silly mapToRegistry name fs
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/fs
+29 verbose addNameRange registry:https://registry.npmjs.org/fs not in flight; fetching
+30 verbose request uri https://registry.npmjs.org/fs
+31 verbose request no auth needed
+32 info attempt registry request try #1 at 09:38:48
+33 verbose request id 882c24ff3e80eb14
+34 http request GET https://registry.npmjs.org/fs
+35 info retry will retry, error on last attempt: Error: read ECONNRESET
+36 info attempt registry request try #2 at 09:39:19
+37 http request GET https://registry.npmjs.org/fs
+38 info retry will retry, error on last attempt: Error: socket hang up
+39 info attempt registry request try #3 at 09:41:24
+40 http request GET https://registry.npmjs.org/fs
+41 verbose stack Error: socket hang up
+41 verbose stack     at TLSSocket.onHangUp (_tls_wrap.js:1035:19)
+41 verbose stack     at TLSSocket.g (events.js:260:16)
+41 verbose stack     at emitNone (events.js:72:20)
+41 verbose stack     at TLSSocket.emit (events.js:166:7)
+41 verbose stack     at endReadableNT (_stream_readable.js:905:12)
+41 verbose stack     at doNTCallback2 (node.js:441:9)
+41 verbose stack     at process._tickCallback (node.js:355:17)
+42 verbose cwd E:\github\shoutbox\register
+43 error Windows_NT 6.1.7601
+44 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "fs"
+45 error node v4.2.2
+46 error npm  v2.14.7
+47 error code ECONNRESET
+48 error network socket hang up
+48 error network This is most likely not a problem with npm itself
+48 error network and is related to network connectivity.
+48 error network In most cases you are behind a proxy or have bad network settings.
+48 error network
+48 error network If you are behind a proxy, please make sure that the
+48 error network 'proxy' config is set properly.  See: 'npm help config'
+49 verbose exit [ 1, true ]
